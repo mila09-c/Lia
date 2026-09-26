@@ -1,0 +1,208 @@
+/* Fuente general Arial para todo el encabezado */
+.seccion-genero {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo nocturno alineado con tu diseño */
+  border-radius: 12px;
+}
+
+/* Título principal H2 (un poco más grande que el texto) */
+.seccion-genero h2 {
+  font-size: 1.8rem;               /* Tamaño superior al texto */
+  margin-top: 0;                  /* Sin margen superior para que quede pegado al borde del contenedor */
+  margin-bottom: 15px;            /* Espacio debajo del título */
+  color: #0a004d;                  /* Tono morado claro para destacar */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra ligera para resaltar */
+  text-align: center;               /* Centrado del título */
+}
+
+/* Subtítulo H3 de la navegación */
+.seccion-genero h3 {
+  font-size: 1.3rem;               /* Un poco más pequeño que el h2 pero mayor al p */
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #0a004d;                  /* Mismo tono morado que el h2 */
+}
+
+/* Párrafos (se mantiene el tamaño de fuente estándar) */
+.seccion-genero p {
+  font-size: 1rem;
+  line-height: 1.6;                 /* Mejora la legibilidad */
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+/* Estilos de la lista de subgéneros */
+.nav-subgeneros ul {
+  list-style-type: none;           /* Quita los circulitos/viñetas */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;                 /* Si no caben en una línea, se acomodan abajo */
+  gap: 10px;                       /* Espacio horizontal y vertical entre botones */
+}
+
+/* Botones de enlace para los subgéneros */
+.nav-subgeneros a {
+  display: inline-block;
+  background-color: #3b0008;       /* Fondo del botón */
+  color: #ffffff;
+  text-decoration: none;           /* Quita el subrayado azul */
+  padding: 8px 16px;
+  border-radius: 20px;             /* Bordes redondeados tipo cápsula */
+  font-size: 0.9rem;
+  border: 1px solid #6b0017;
+  transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el cursor por encima */
+.nav-subgeneros a:hover {
+  background-color: #380700;
+  color: #0b0726;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Configuración General */
+.contenido-principal {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #14003a;                           /* Color de texto morado oscuro */
+  padding: 20px;                              /* Espaciado interno */
+  background-color: #fcfcfc;                /* Fondo claro para contraste */
+}
+
+/* --- TARJETAS DE SUBGÉNEROS --- */
+.bloque-subgeneros {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.tarjeta-subgenero {
+  background-color: #110b38;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #231668;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.info-subgenero {
+  flex: 1;
+}
+
+.info-subgenero h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 50px;
+}
+
+.info-subgenero p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tarjeta-subgenero img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #3d299a;
+}
+
+/* Responsivo para celulares (subgéneros) */
+@media (max-width: 768px) {
+  .tarjeta-subgenero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .tarjeta-subgenero img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* --- SECCIONES DE ARTISTAS Y CANCIONES (CUADROS / GRID) --- */
+.seccion-destacados {
+  margin-bottom: 50px;
+  background-color: #0d072c;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border-top: 2px solid #231668;
+}
+
+.titulo-seccion {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 50px
+}
+
+.descripcion-seccion {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Grid de Tarjetas */
+.grid-cuadros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* Estilo de cada cuadro/card */
+.tarjeta-cuadro {
+  background-color: #170e49;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #2d1d7c;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tarjeta-cuadro:hover {
+  transform: translateY(-5px);
+  background-color: #231569;
+}
+
+.tarjeta-cuadro a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tarjeta-cuadro img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.tarjeta-cuadro h4 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.tarjeta-cuadro p {
+  font-size: 0.85rem;
+  color: #a496ff;
+  margin: 0;
+}
